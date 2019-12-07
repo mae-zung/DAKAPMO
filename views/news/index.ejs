@@ -18,9 +18,9 @@
   
 </div>
 
-<div class="container">
+<div class="container" style="text-align:center;">
 
-  <h1>News</h1>
+  <h1>스터디를 시작해보세요</h1>
   <ul class="nav nav-pills">
     <li class="nav-item">
       <a class="nav-link <% if (!selectedCategory) { %>active<% } %>" href="/news">전체</a>
@@ -31,9 +31,10 @@
   </ul>
 
   <% if (news.length>0) { %>
+    <% for(var k=0; k < news.length/4; k++) { %>
   <div class="row">
-   
-    <div class="col-sm-2">
+      <% for(var j=0; j < news.length; j++) { %>
+      <div class="col-sm-3">
         <% for(var i=0; i < news.length; i++) { %>
         <div class="card" >
             <img src="/uploads/<%= news[i].upload %>" class="card-img-top" alt="...">
@@ -41,14 +42,16 @@
                 <h5 class="card-title"><%= news[i].title %></h5>
                 
                 <a href="https://sports.v.daum.net/v/NyzNEJTLC6" class="btn btn-primary">스터디참여하기</a>
-                <%= news[i].category_title %> /
-                <%= news[i].author %>
+               <p> <%= news[i].category_title %> /
+                <%= news[i].author %></p>
+                
               </div>
         </div>
         <% } %>
     </div>
-    
+    <% } %>    
 </div>
+<% } %>
 
 
 
