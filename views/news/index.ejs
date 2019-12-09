@@ -31,11 +31,10 @@
   </ul>
 
   <% if (news.length>0) { %>
-    <% for(var k=0; k < news.length/4; k++) { %>
+    <% for(var j=1; j < news.length/4+1; j++) { %>
   <div class="row">
-      <% for(var j=0; j < news.length; j++) { %>
+        <% for(var i=(4*j)-4; i < 4*j; i++) { %>
       <div class="col-sm-3">
-        <% for(var i=0; i < news.length; i++) { %>
         <div class="card" >
             <img src="/uploads/<%= news[i].upload %>" class="card-img-top" alt="...">
             <div class="card-body">
@@ -43,13 +42,11 @@
                 
                 <a href="https://sports.v.daum.net/v/NyzNEJTLC6" class="btn btn-primary">스터디참여하기</a>
                <p> <%= news[i].category_title %> /
-                <%= news[i].author %></p>
-                
-              </div>
+                보증금:<%= news[i].author %>원</p>
+            </div>
         </div>
-        <% } %>
     </div>
-    <% } %>    
+    <% } %>
 </div>
 <% } %>
 
