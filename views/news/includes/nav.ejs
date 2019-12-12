@@ -21,10 +21,14 @@
 
     <% if(locals.user) { %>
       
-      <a class="btn btn-info" href="/news/add" role="button">
-        스터디 개설하기
-      </a>
+      
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex"><li class="nav-item dropdown">
+
+        <li class="nav-item">
+            <a href="/news/add" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">스터디 개설하기</a>
+        
+        </li>
+    
         
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <%= locals.user.email %>
@@ -49,15 +53,18 @@
       </div>
     </li>
 
+    
       <li class="nav-item">
         <a class="nav-item nav-link mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        
         </a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link btn btn-outline-bright my-2 my-sm-0" href="/account/logout">Logout</a>
       </li>
+
     </ul>
+
     <% } else { %>
     <div class="btn-group" role="group" aria-label="Basic example">
       <a class="nav-link btn btn-info my-2 my-sm-0" href="/account/login">Login</a>
@@ -66,3 +73,5 @@
     <% } %>
   </div>
 </nav>
+
+

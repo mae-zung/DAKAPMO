@@ -2,7 +2,6 @@
 <%- include('includes/nav'); -%>
 
 
-<!-- Jumbotron -->
 <div class="card card-image" style="background-image:url( /uploads/<%= news.upload %>)">
   <div class="text-white text-center rgba-stylish-strong py-5 px-4">
     <div class="py-5">
@@ -19,16 +18,15 @@
   </div>
 </div>
   
-</div>
+
 
 <div class="jumbotron" style="text-align:center;">
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">        
             <h4>기간</h4>
             <h3>00/00 시작</h3>
-            
           </div>
         </div>
         <div class="col-lg-4">
@@ -44,12 +42,18 @@
           </div>
         </div>
       </div>
+      
     </div>
+
+
   </div>
 
-
-<div class="container">
+  <div class="text-center">
+  <a href="/news/study" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">스터디 개설하기</a>
+</div>
   
+
+  <!--
 
 <% if (news) { %>
   
@@ -95,11 +99,12 @@
     </div>
   </div>
 
-  <div class="row">
+
+ <div class="row">
     <div class="col">
         <hr>
         <h4>댓글</h4>
-        <!-- Styles from https://getbootstrap.com/docs/4.3/components/forms/#form-controls -->
+       
         <form method="post" action="/news/<%= news.id %>/comment">
             <div class="form-group">
               <label for="exampleInputEmail1">이름</label>
@@ -116,7 +121,7 @@
 </div>
 <div class="row">
     <div class="col">
-        <!-- Styles from https://getbootstrap.com/docs/4.3/components/list-group/#flush-->
+        
         <% if (comments.length>0) { %>
           <ul class="list-group list-group-flush">
             <% for(var i=0; i < comments.length; i++) { %>
@@ -139,6 +144,6 @@
 <% } else { %>
   <p>Not exist</p>
 <% } %>
-
+-->
 </div>
 <%- include('includes/footer'); -%>
