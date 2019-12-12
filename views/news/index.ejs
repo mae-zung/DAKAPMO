@@ -31,9 +31,9 @@
   </ul>
 
   <% if (news.length>0) { %>
-    <% for(var j=1; j < news.length/4+1; j++) { %>
+    
   <div class="row">
-        <% for(var i=(4*j)-4; i < 4*j; i++) { %>
+        <% for(var i=0; i < news.length; i++) { %>
       <div class="col-sm-3">
         <div class="card" >
             <img src="/uploads/<%= news[i].upload %>" class="card-img-top" alt="...">
@@ -48,7 +48,7 @@
     </div>
     <% } %>
 </div>
-<% } %>
+
 
 
 
@@ -69,14 +69,7 @@
 
   
 </div>
-<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
-    <div class="btn-group" role="group" aria-label="First group">
-    </div>
-    <div class="input-group">
-      <a href="/news/add" class="btn btn-outline-success">기사작성</a>
-    </div>
-  </div>
-</div>
+
 
 
 <%- include('includes/footer'); -%>
